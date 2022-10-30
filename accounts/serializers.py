@@ -15,13 +15,13 @@ class UserCreateSerializer(UserCreateSerializer):
 class AccountTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = AccountType
-        fields = ('account_type',)
+        fields = '__all__'
 
 
 class UserSecondarySerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('email', 'first_name', 'last_name', 'phone', 'address', 'profile_picture')
+        fields = ('email', 'first_name', 'last_name', 'phone', 'address', 'profile_picture', 'country')
 
         def update(self, instance, validated_data):
             first_name = validated_data.pop('first_name', None)
