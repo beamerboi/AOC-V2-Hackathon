@@ -36,7 +36,8 @@ INSTALLED_APPS = [
 
     #personal_apps
     'accounts',
-    'article'
+    'article',
+    'contact'
 ]
 
 MIDDLEWARE = [

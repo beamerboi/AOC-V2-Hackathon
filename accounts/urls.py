@@ -7,5 +7,6 @@ urlpatterns = [
     path('me/update/', views.ProfileUpdateAPIView.as_view()),
     path('me/', views.ProfileDetailAPIView.as_view()),
     path('account-type/', views.AccountTypeSerializerAPIListView.as_view()),
-
+    path('<int:pk>/', views.UserProfileDetail.as_view()),
+    path('account-role/', views.AccountRoleListView.as_view())
 ]
